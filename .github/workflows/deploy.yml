@@ -14,11 +14,10 @@ jobs:
         run: |
           mkdir -p dist
           cp index.html style.css main.js dist/
-      - uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          wranglerVersion: "4.76.0"
-          command: pages deploy dist --project-name=zubago --commit-message="${{ github.sha }}"
+      - name: Deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: npx wrangler@4 pages deploy dist --project-name=zubago --commit-message="${{ github.sha }}"
 
   deploy-worker:
     name: Deploy worker
@@ -28,9 +27,8 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
         with:
           targets: wasm32-unknown-unknown
-      - uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          wranglerVersion: "4.76.0"
-          workingDirectory: worker
-          command: deploy
+      - name: Deploy Worker
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        working-directory: worker
+        run: npx wrangler@4 deploy
