@@ -10,10 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Prepare static files
+        run: |
+          mkdir -p dist
+          cp index.html style.css main.js dist/
       - uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          command: pages deploy . --project-name=zubago --commit-message="${{ github.sha }}"
+          command: pages deploy dist --project-name=zubago --commit-message="${{ github.sha }}"
 
   deploy-worker:
     name: Deploy worker
