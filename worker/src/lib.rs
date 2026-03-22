@@ -158,14 +158,44 @@ async fn handle_contact(mut req: Request, env: &Env) -> Result<Response> {
         );
     }
 
-    // Log for now - email sending via send_email binding can be added
-    // once Email Routing is configured on the domain
-    console_log!(
-        "Contact form submission from {} <{}> - {}",
-        body.name,
-        body.email,
-        body.subject
-    );
+    // Send email notification via Resend
+    if let Ok(api_key) = env.secret("RESEND_API_KEY") {
+        let email_body = serde_json::json!({
+            "from": "Zubago Contact <contact@zubago.com>",
+            "to": ["andy@zubago.com"],
+            "subject": format!("[Zubago] {} - {}", body.subject, body.name),
+            "html": format!(
+                "<h3>New contact form submission</h3>\
+                <p><strong>Name:</strong> {}</p>\
+                <p><strong>Email:</strong> {}</p>\
+                <p><strong>Subject:</strong> {}</p>\
+                <p><strong>Message:</strong></p>\
+                <p>{}</p>",
+                body.name, body.email, body.subject,
+                body.message.replace('\n', "<br>")
+            )
+        });
+
+        let mut init = RequestInit::new();
+        init.with_method(Method::Post);
+        init.with_body(Some(email_body.to_string().into()));
+
+        let headers = Headers::new();
+        headers.set("Authorization", &format!("Bearer {}", api_key.to_string()))?;
+        headers.set("Content-Type", "application/json")?;
+        init.with_headers(headers);
+
+        let req = Request::new_with_init("https://api.resend.com/emails", &init)?;
+        match Fetch::Request(req).send().await {
+            Ok(mut resp) => {
+                if resp.status_code() != 200 {
+                    let text = resp.text().await.unwrap_or_default();
+                    console_error!("Resend error ({}): {}", resp.status_code(), text);
+                }
+            }
+            Err(e) => console_error!("Resend fetch error: {}", e),
+        }
+    }
 
     json_response(
         &ContactResponse {
