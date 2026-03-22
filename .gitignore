@@ -1,0 +1,7 @@
+worker/target/
+worker/build/
+worker/.wrangler/
+node_modules/
+.dev.vars
+.wrangler/
+.playwright-mcp/

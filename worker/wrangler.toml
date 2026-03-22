@@ -1,0 +1,22 @@
+name = "zubago-contact"
+main = "build/worker/shim.mjs"
+compatibility_date = "2024-11-01"
+
+[build]
+command = "PATH=$HOME/.cargo/bin:$PATH cargo install worker-build && PATH=$HOME/.cargo/bin:$PATH worker-build --release"
+
+[vars]
+ALLOWED_ORIGIN = "*"
+
+# Turnstile secret key - set via `wrangler secret put TURNSTILE_SECRET_KEY`
+# Do NOT put the actual secret here.
+
+[[d1_databases]]
+binding = "DB"
+database_name = "zubago-contact"
+database_id = "b748458b-c00b-48d5-92c6-3f1c516d329f"
+
+# Email binding for sending contact notifications
+# Uncomment after enabling Email Routing on zubago.com:
+# [[send_email]]
+# name = "EMAIL"

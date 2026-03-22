@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zubago - Agentic-First Software Consulting</title>
+  <meta name="description" content="Zubago is a high-end bespoke consulting firm specializing in agentic AI development, team training, and hands-on engineering since 2007.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+
+  <!-- Ambient background grid -->
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="scan-line" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-text">ZUBAGO</span>
+        <span class="logo-dot"></span>
+      </a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact" class="nav-cta">Get in Touch</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu">
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Get in Touch</a>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">Est. 2007 &middot; Agentic-First Consulting</div>
+      <h1>
+        <span class="hero-line">Build the future</span>
+        <span class="hero-line accent">with intelligent agents.</span>
+      </h1>
+      <p class="hero-sub">
+        We help teams adopt agentic development practices, architect AI-native systems,
+        and ship production-grade software that leverages the full power of modern AI.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Start a Conversation</a>
+        <a href="#projects" class="btn btn-ghost">See Our Work</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">18+</span>
+          <span class="stat-label">Years in Business</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">25+</span>
+          <span class="stat-label">Years Engineering</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">F500</span>
+          <span class="stat-label">to YC Startups</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="hex-grid">
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="hex" width="56" height="100" patternUnits="userSpaceOnUse" patternTransform="scale(0.5)">
+              <path d="M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+            </pattern>
+          </defs>
+          <rect width="400" height="400" fill="url(#hex)"/>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// services</span>
+        <h2>Agentic-first means <span class="text-accent">agents aren't bolted on</span> &mdash; they're foundational.</h2>
+        <p class="section-desc">
+          From training your team on agentic workflows to hands-on architecture and implementation,
+          we bring deep expertise in building systems where AI agents are first-class participants.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3>Agentic Architecture</h3>
+          <p>Design and build AI-native systems with MCP gateways, tool orchestration, and multi-agent workflows that actually ship to production.</p>
+          <ul class="service-tags">
+            <li>MCP</li>
+            <li>Tool Design</li>
+            <li>Agent Pipelines</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Team Training</h3>
+          <p>Hands-on workshops and embedded coaching to get your engineering team fluent in agentic development patterns, prompt engineering, and AI-augmented workflows.</p>
+          <ul class="service-tags">
+            <li>Workshops</li>
+            <li>Coaching</li>
+            <li>Best Practices</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+              <line x1="14" y1="4" x2="10" y2="20"/>
+            </svg>
+          </div>
+          <h3>Hands-On Engineering</h3>
+          <p>Full-stack development from infrastructure to UI. We embed with your team or lead projects end-to-end &mdash; serverless, cloud-native, and built to scale.</p>
+          <ul class="service-tags">
+            <li>Full-Stack</li>
+            <li>AWS</li>
+            <li>Cloud-Native</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 1v6m0 6v6"/>
+              <path d="M1 12h6m6 0h6"/>
+              <path d="M4.22 4.22l4.24 4.24m3.08 3.08l4.24 4.24"/>
+              <path d="M19.78 4.22l-4.24 4.24m-3.08 3.08l-4.24 4.24"/>
+            </svg>
+          </div>
+          <h3>AI Cost &amp; Performance</h3>
+          <p>Optimize your AI spend and latency. We've achieved 70x query performance improvements and specialize in making AI systems fast, reliable, and cost-effective.</p>
+          <ul class="service-tags">
+            <li>Optimization</li>
+            <li>Cost Reduction</li>
+            <li>Performance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section section-dark" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// projects</span>
+        <h2>Things we're <span class="text-accent">building</span></h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card project-featured">
+          <div class="project-header">
+            <span class="project-status live">Live</span>
+            <span class="project-tech">FastAPI &middot; AWS CDK &middot; PostgreSQL &middot; MCP</span>
+          </div>
+          <h3>Claudepedia</h3>
+          <p class="project-tagline">A persistent knowledge base where Claude instances share research, ideas, and build on each other's work.</p>
+          <p class="project-desc">
+            A wiki written by and for AI &mdash; Claude instances from around the world contribute entries, respond to each other,
+            and build a shared pool of knowledge that persists beyond individual sessions. Features a FastAPI backend on Aurora Serverless,
+            CloudFront CDN, and an MCP server published to PyPI for zero-config Claude integration.
+          </p>
+          <div class="project-links">
+            <a href="https://claudepedia.pizza" target="_blank" rel="noopener" class="project-link">claudepedia.pizza</a>
+            <a href="https://pypi.org/project/claudepedia-mcp/" target="_blank" rel="noopener" class="project-link">PyPI: claudepedia-mcp</a>
+          </div>
+        </article>
+
+        <article class="project-card project-featured">
+          <div class="project-header">
+            <span class="project-status building">In Development</span>
+            <span class="project-tech">Next.js &middot; FastAPI &middot; AWS CDK &middot; PostGIS</span>
+          </div>
+          <h3>PowerGrid</h3>
+          <p class="project-tagline">Energy Market Intelligence &mdash; unified visibility into energy project activity across the US.</p>
+          <p class="project-desc">
+            Aggregates public energy data from 19+ federal, state, and local sources into a single platform.
+            Tracks projects from entity formation through commercial operation with a 4-stage entity resolution
+            pipeline (blocking, scoring, LLM verification, human review). Built on Aurora Serverless v2 with PostGIS,
+            pgvector, and MapLibre for geospatial visualization.
+          </p>
+          <div class="project-links">
+            <span class="project-link muted">Private Beta</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// experience</span>
+        <h2>Trusted across <span class="text-accent">every scale</span></h2>
+        <p class="section-desc">
+          From Fortune 500 engineering floors to Y Combinator startups, we've shipped production systems
+          at every scale and velocity. We collaborate with a network of independent consulting firms to
+          tackle projects of any size.
+        </p>
+      </div>
+
+      <div class="experience-layout">
+        <div class="clients-showcase">
+          <div class="client-tier">
+            <h4 class="tier-label">Enterprise</h4>
+            <div class="client-list">
+              <div class="client-item">
+                <span class="client-name">Best Buy</span>
+                <span class="client-role">Lead Software Engineer</span>
+              </div>
+              <div class="client-item">
+                <span class="client-name">3M</span>
+                <span class="client-role">Software Engineer</span>
+              </div>
+              <div class="client-item">
+                <span class="client-name">Credit Karma</span>
+                <span class="client-role">Senior Software Engineer</span>
+              </div>
+              <div class="client-item">
+                <span class="client-name">Cummins</span>
+                <span class="client-role">Software Engineer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="client-tier">
+            <h4 class="tier-label">Energy / Green Tech</h4>
+            <div class="client-list">
+              <div class="client-item highlight">
+                <span class="client-name">NextEra Analytics</span>
+                <span class="client-role">Principal Software Engineer</span>
+                <span class="client-detail">5+ years &middot; Enterprise AI, MCP, Rust, Vue.js</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="client-tier">
+            <h4 class="tier-label">Startups</h4>
+            <div class="client-list">
+              <div class="client-item">
+                <span class="client-name">ServiceBell</span>
+                <span class="client-role">Senior Software Engineer &middot; YC S20</span>
+              </div>
+              <div class="client-item">
+                <span class="client-name">Apptimize</span>
+                <span class="client-role">Senior Software Engineer &middot; YC S13</span>
+              </div>
+              <div class="client-item">
+                <span class="client-name">Phoji</span>
+                <span class="client-role">Principal Software Engineer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="client-tier">
+            <h4 class="tier-label">Founded</h4>
+            <div class="client-list">
+              <div class="client-item">
+                <span class="client-name">GifNinja</span>
+                <span class="client-detail">Widely popular in the MySpace era</span>
+              </div>
+              <div class="client-item">
+                <span class="client-name">resizeimage.org</span>
+                <span class="client-detail">Featured on TechCrunch</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="credentials">
+          <div class="credential-card">
+            <h4>Education</h4>
+            <div class="credential-item">
+              <span class="credential-school">UT Austin</span>
+              <span class="credential-degree">MS Artificial Intelligence <em>(in progress)</em></span>
+            </div>
+            <div class="credential-item">
+              <span class="credential-school">Georgia Tech</span>
+              <span class="credential-degree">MS Computer Science</span>
+            </div>
+            <div class="credential-item">
+              <span class="credential-school">Metro State University</span>
+              <span class="credential-degree">BS Computer Science, Applied Math</span>
+            </div>
+          </div>
+
+          <div class="credential-card">
+            <h4>Core Technologies</h4>
+            <div class="tech-cloud">
+              <span>Python</span>
+              <span>TypeScript</span>
+              <span>Rust</span>
+              <span>AWS</span>
+              <span>Claude / GPT</span>
+              <span>MCP</span>
+              <span>FastAPI</span>
+              <span>Vue.js</span>
+              <span>React</span>
+              <span>Next.js</span>
+              <span>Svelte</span>
+              <span>CDK</span>
+              <span>Lambda</span>
+              <span>DynamoDB</span>
+              <span>PostgreSQL</span>
+              <span>Serverless</span>
+            </div>
+          </div>
+
+          <div class="credential-card">
+            <h4>Network</h4>
+            <p class="network-desc">
+              We collaborate with a network of independent consulting firms to scale teams and tackle
+              complex multi-disciplinary projects. Extensive green energy industry experience through
+              our long-running engagement with NextEra Analytics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section-dark" id="contact">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-text">
+          <span class="section-tag">// contact</span>
+          <h2>Let's build <span class="text-accent">something together</span></h2>
+          <p>Whether you need agentic architecture guidance, hands-on engineering, or team training &mdash; let's talk about what we can build.</p>
+          <div class="contact-details">
+            <a href="mailto:andy@zubago.com" class="contact-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="M22 7l-10 7L2 7"/>
+              </svg>
+              andy@zubago.com
+            </a>
+            <a href="tel:+19523812962" class="contact-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              952.381.2962
+            </a>
+            <a href="https://www.linkedin.com/in/andygaskell" target="_blank" rel="noopener" class="contact-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@company.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>What can we help with?</option>
+                <option value="Agentic Architecture">Agentic Architecture</option>
+                <option value="Team Training">Team Training</option>
+                <option value="Hands-On Engineering">Hands-On Engineering</option>
+                <option value="General Inquiry">General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" required placeholder="Tell us about your project..."></textarea>
+            </div>
+            <div class="form-footer">
+              <div class="cf-turnstile" data-sitekey="TURNSTILE_SITE_KEY_PLACEHOLDER" data-theme="dark" data-size="flexible"></div>
+              <button type="submit" class="btn btn-primary btn-submit">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loading" hidden>Sending...</span>
+              </button>
+            </div>
+            <div id="form-status" class="form-status" hidden></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">ZUBAGO</span>
+        <span class="footer-copy">&copy; 2007&ndash;2026 Zubago. Minnesota, USA.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
