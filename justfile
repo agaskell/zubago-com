@@ -8,7 +8,7 @@ serve port="8765":
 deploy:
     #!/usr/bin/env bash
     tmp=$(mktemp -d)
-    cp index.html style.css main.js favicon.ico favicon.svg favicon-32x32.png favicon-16x16.png apple-touch-icon.png "$tmp/"
+    cp index.html style.css main.js favicon.ico favicon.svg favicon-32x32.png favicon-16x16.png apple-touch-icon.png _redirects "$tmp/"
     npx wrangler pages deploy "$tmp" --project-name=zubago --commit-message="Deploy $(date -u +%Y-%m-%dT%H:%M:%SZ)"
     rm -rf "$tmp"
 
