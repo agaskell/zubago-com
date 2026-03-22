@@ -15,7 +15,7 @@ jobs:
       - name: Prepare static files
         run: |
           mkdir -p dist
-          cp index.html style.css main.js favicon.ico favicon.svg favicon-32x32.png favicon-16x16.png apple-touch-icon.png dist/
+          cp index.html style.css main.js favicon.ico favicon.svg favicon-32x32.png favicon-16x16.png apple-touch-icon.png og-image.png dist/
       - name: Deploy to Cloudflare Pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
