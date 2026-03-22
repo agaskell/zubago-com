@@ -458,7 +458,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 /* ---- Services Grid ---- */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
@@ -1014,6 +1014,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
   .stat-divider { display: none; }
 
+  .services-grid,
   .projects-grid {
     grid-template-columns: 1fr;
   }
