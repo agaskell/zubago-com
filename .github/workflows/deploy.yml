@@ -17,6 +17,7 @@ jobs:
       - uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          wranglerVersion: "4.76.0"
           command: pages deploy dist --project-name=zubago --commit-message="${{ github.sha }}"
 
   deploy-worker:
@@ -30,5 +31,6 @@ jobs:
       - uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          wranglerVersion: "4.76.0"
           workingDirectory: worker
           command: deploy
