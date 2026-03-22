@@ -161,7 +161,7 @@ async fn handle_contact(mut req: Request, env: &Env) -> Result<Response> {
     // Send email notification via Resend
     if let Ok(api_key) = env.secret("RESEND_API_KEY") {
         let email_body = serde_json::json!({
-            "from": "Zubago Contact <contact@zubago.com>",
+            "from": "Zubago Contact <contact@hello.zubago.com>",
             "to": ["andy@zubago.com"],
             "subject": format!("[Zubago] {} - {}", body.subject, body.name),
             "html": format!(
